@@ -5,6 +5,8 @@ import { publicRoutes } from './routes';
 import { DefautLayout } from '~/components/Layout';
 
 function App() {
+
+
     return (
         <Router>
             <div className="App">
@@ -31,6 +33,7 @@ function App() {
                                 />
                             );
                         })}
+                        
                 </Routes>
             </div>
         </Router>

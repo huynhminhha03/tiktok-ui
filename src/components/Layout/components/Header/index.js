@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import className from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react/headless';
+import Button from '~/components/Button';
 import {
     faCircleXmark,
     faSpinner,
@@ -21,8 +22,8 @@ function Header() {
     const [searchResult, setSearchResult] = useState([]);
 
     useEffect(() => {
-        setInterval(() => {
-            setSearchResult([]);
+        setTimeout(() => {
+            setSearchResult([1, 2, 3]);
         }, 1000);
     }, []);
     return (
@@ -33,22 +34,18 @@ function Header() {
                 </div>
                 <Tippy
                     visible={searchResult.length > 0}
-                    interactive                        //Có thể tương tác với popover
+                    interactive //Có thể tương tác với popover
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                             <PopperWrapper>
-                                <h4 className={cx('search-title')}>
-                                    Accounts
-                                </h4>
+                                <h4 className={cx('search-title')}>Accounts</h4>
 
                                 <AccountItem />
                                 <AccountItem />
                                 <AccountItem />
                                 <AccountItem />
                                 <AccountItem />
-                                <span className={cx('search-more')}>
-                                    View all result for "{searchResult}"
-                                </span>
+                                <span className={cx('search-more')}>View all result for "{searchResult}"</span>
                             </PopperWrapper>
                         </div>
                     )}
@@ -66,13 +63,12 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
-                    <button className={cx('action-upload')}>
-                        <FontAwesomeIcon icon={faPlus} />
-                        <span>Upload</span>
-                    </button>
-                    <button className={cx('action-login')}>
-                        <span>Login</span>
-                    </button>
+                    <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                        Upload
+                    </Button>
+                    <Button primary>
+                        Log in 
+                    </Button>
                     <FontAwesomeIcon className={cx('action-icon')} icon={faEllipsisVertical} />
                 </div>
             </div>
