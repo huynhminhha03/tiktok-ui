@@ -19,94 +19,6 @@
     padding: 0 var(--default-layout-horizontal-spacer);
 }
 
-.search,
-.search-result {
-    width: 361px;
-}
-
-.search {
-    position: relative;
-    height: var(--height-search);
-    padding-left: 16px;
-    display: flex;
-    background: rgba(22, 24, 35, 0.06);
-    border-radius: var(--search-border-radius);
-    border: 1.5px solid transparent;
-
-    input {
-        color: var(--black);
-        font-size: 1.6rem;
-        line-height: 22px;
-        font-weight: 400;
-        padding: 12px 0;
-        background-color: transparent;
-        flex: 1;
-        caret-color: var(--primary-color);
-    }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 0.75);
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        height: var(--height-search-separated);
-        width: 1px;
-        background-color: rgba(22, 24, 35, 0.12);
-        right: var(--search-button-width);
-        top: calc((var(--height-search) - var(--height-search-separated)) / 2);
-    }
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.2);
-    }
-}
-
-.search-title {
-    font-size: 1.4rem;
-    padding: 5px 12px;
-    color: rgba(22, 24, 35, 0.5);
-}
-
-.search-more {
-    font-weight: 600;
-    line-height: 22px;
-    padding: 15px 16px;
-}
-
-.clear,
-.loading {
-    font-size: 1.5rem;
-    color: rgba(22, 24, 35, 0.34);
-    position: absolute;
-    right: var(--search-button-width);
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 12px;
-}
-
-.loading {
-    display: none;
-}
-
-.search-btn {
-    background-color: transparent;
-    width: 52px;
-    height: 100%;
-    border-bottom-right-radius: var(--search-border-radius);
-    border-top-right-radius: var(--search-border-radius);
-    color: rgba(22, 24, 35, 0.34);
-    font-size: 2rem;
-
-    &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-        cursor: pointer;
-    }
-
-    &:active {
-        background-color: rgba(22, 24, 35, 0.06);
-    }
-}
-
 .actions {
     display: flex;
     align-items: center;
@@ -126,12 +38,9 @@
     color: #161823;
     padding: 4px 12px;
     cursor: pointer;
-
-    &.btn-icon {
-        line-height: 3.2rem;
-        display: flex;
-        align-items: center;
-    }
+    line-height: 3.2rem;
+    display: flex;
+    align-items: center;
 }
 
 .user-avatar {
