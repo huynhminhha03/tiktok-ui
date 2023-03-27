@@ -17,7 +17,7 @@ function App() {
                             let Layout = DefautLayout
                             if(route.layout) {
                                 Layout = route.layout
-                            } else if (Layout === null) {
+                            } else if (route.layout === null) {
                                 Layout = DefautLayout;
                             }
 

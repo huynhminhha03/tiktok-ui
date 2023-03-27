@@ -16,7 +16,12 @@
     width: var(--default-layout-width);
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--default-layout-horizontal-spacer);
+    padding: 0 20px 0 var(--default-layout-horizontal-spacer);
+}
+
+.logo {
+    display: block;
+    min-width: 300px;
 }
 
 .actions {

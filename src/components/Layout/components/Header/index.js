@@ -24,11 +24,12 @@ import {
     UserIcon,
 } from '~/components/Icons';
 import Image from '~/components/Image';
+import { Link } from 'react-router-dom';
 
 const cx = className.bind(styles);
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
 
     const MENU_ITEMS = [
         {
@@ -100,9 +101,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to='/' className={cx('logo')}>
                     <TiktokLogo />
-                </div>
+                </Link>
 
                 <Search />
 
@@ -128,7 +129,7 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                            <Button text to='/upload' leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                                 Upload
                             </Button>
                             <Button primary>Log in</Button>
