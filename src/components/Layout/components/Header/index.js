@@ -2,12 +2,14 @@ import className from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
 import Search from '~/components/Layout/components/Search'
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { Menu } from '~/components/Popper';
+import routesConfig from '~/config/routes';
 import {
     CoinIcon,
     DarkmodeIcon,
@@ -24,12 +26,11 @@ import {
     UserIcon,
 } from '~/components/Icons';
 import Image from '~/components/Image';
-import { Link } from 'react-router-dom';
 
 const cx = className.bind(styles);
 
 function Header() {
-    const currentUser = false;
+    const currentUser = true;
 
     const MENU_ITEMS = [
         {
@@ -101,7 +102,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to='/' className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo')}>
                     <TiktokLogo />
                 </Link>
 
@@ -129,7 +130,7 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button text to='/upload' leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                            <Button text to={routesConfig.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                                 Upload
                             </Button>
                             <Button primary>Log in</Button>
@@ -142,7 +143,6 @@ function Header() {
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/946b2b862e73839ba07b3908aa973b83~c5_100x100.jpeg?x-expires=1679490000&x-signature=wQoWXzlvfrN4%2BzDY7sz4WozAY8A%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                                fallback='https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/269914322_1594144824251293_8665849558725026566_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=103&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=CY08FhupOksAX_0Hr4r&_nc_ht=scontent.fhan14-3.fna&oh=00_AfAIZu3t00BebydmTGEqBgtCtaNRGb1IxiZ7QBw5X6pHRA&oe=642159D7'
                             />
                         ) : (
                             <button className={cx('more-icon')}>

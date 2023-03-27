@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 
-import * as searchServices from '~/apiServices/searchServices'
+import * as searchServices from '~/apiServices/searchServices';
 import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -41,12 +41,10 @@ function Search() {
         fetchApi();
     }, [debounced]);
 
-    const handleClick = () => {};
-
     const handleClear = () => {
         setSearchValue('');
+        setSearchResult([]);
         inputRef.current.focus();
-        setShowResult(false);
     };
 
     const handleHideResult = () => {
@@ -54,8 +52,10 @@ function Search() {
     };
 
     const handleChange = (e) => {
-        setSearchValue(e.target.value);
-        setShowResult(true);
+        const searchValue = e.target.value;
+        if(!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        } 
     };
 
     return (
@@ -93,7 +93,7 @@ function Search() {
 
                 {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
-                <button className={cx('search-btn')} onClick={handleClick}>
+                <button className={cx('search-btn')} onMouseDown={e => e.preventDefault()}>
                     <SearchIcon />
                 </button>
             </div>

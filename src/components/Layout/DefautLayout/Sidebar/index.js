@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Sidebar.module.scss';
 import { FollowingIcon, HomeIcon, LiveIcon } from '~/components/Icons';
 import Button from '~/components/Button';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -10,17 +11,17 @@ function Sidebar() {
         {
             icon: <HomeIcon />,
             title: 'For You',
-            to: '/foryou',
+            to: routesConfig.home,
         },
         {
             icon: <FollowingIcon />,
             title: 'Following',
-            to: '/following',
+            to: routesConfig.following,
         },
         {
             icon: <LiveIcon />,
             title: 'LIVE',
-            to: '/live',
+            to: routesConfig.live,
         },
     ];
 
