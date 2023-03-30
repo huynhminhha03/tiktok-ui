@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchService from '~/services/searchService';
 import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -32,7 +32,7 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(debounced);
+            const result = await searchService.search(debounced);
             setSearchResult(result);
 
             setLoading(false);

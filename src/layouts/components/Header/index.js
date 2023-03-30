@@ -4,12 +4,12 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 
-import Search from '~/components/Layout/components/Search'
+import Search from '~/layouts/components/Search';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { Menu } from '~/components/Popper';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import {
     CoinIcon,
     DarkmodeIcon,
@@ -102,12 +102,11 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <TiktokLogo />
                 </Link>
 
                 <Search />
-
 
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -130,7 +129,7 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button text to={routesConfig.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                            <Button text to={config.routes.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                                 Upload
                             </Button>
                             <Button primary>Log in</Button>
