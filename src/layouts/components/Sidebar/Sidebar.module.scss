@@ -1,30 +1,6 @@
 .wrapper {
-    max-width: 340px;
-}
-
-//nav
-.nav {
-    padding-right: 8px;
-}
-
-.nav-list {
+    width: 340px;
     padding: 20px 0 26px 8px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8px;
-
-    .nav-item {
-        justify-content: start;
-        width: 100%;
-        font-size: 1.8rem;
-        font-weight: 700;
-        padding: 8px;
-        margin-left: 0;
-
-        &:hover {
-            background-color: rgba(22, 24, 35, 0.03);
-        }
-    }
 }
 
 //login
