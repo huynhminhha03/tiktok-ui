@@ -17,6 +17,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
             const isParent = !!item.children;
             return (
                 <MenuItem
+                    
                     key={index}
                     data={item}
                     onClick={() => {

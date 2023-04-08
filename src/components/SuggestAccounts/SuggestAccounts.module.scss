@@ -1,0 +1,83 @@
+.wrapper {
+    padding: 16px 0;
+    margin-top: 8px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 8px;
+        right: 8px;
+        height: 1px;
+        background-color: rgba(22, 24, 35, .12);
+        transform: scaleY(0.5);
+    }
+}
+
+.label {
+    padding: 0 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(22, 24, 35, .75);
+}
+
+//Account item
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        border-radius: 4px;
+    }
+}
+
+.info-item {
+    flex: 1;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.nickname {
+    text-overflow: ellipsis;
+    margin-top: -2px;
+    max-width: 260px;
+    line-height: 22px;
+}
+
+.checked {
+    font-size: 1.4rem;
+    margin-left: 4px;
+    color: rgb(32, 213, 236);
+}
+
+.name {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 260px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.see-more {
+    color: rgb(254, 44, 85);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0px 8px;
+    margin-top: 8px;
+    cursor: pointer;
+}

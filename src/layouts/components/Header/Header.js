@@ -30,7 +30,7 @@ import Image from '~/components/Image';
 const cx = className.bind(styles);
 
 function Header() {
-    const currentUser = false;
+    const currentUser = true;
 
     const MENU_ITEMS = [
         {
@@ -139,7 +139,7 @@ function Header() {
                     <Menu items={currentUser ? userItem : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/946b2b862e73839ba07b3908aa973b83~c5_100x100.jpeg?x-expires=1679490000&x-signature=wQoWXzlvfrN4%2BzDY7sz4WozAY8A%3D"
+                                src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-1/269914322_1594144824251293_8665849558725026566_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=otmyCFb7TVgAX83VXuH&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfCC8Hj8aMAX3BHPFNi-t7oIrCFb68IkuTVxex_wUFtP-A&oe=64352057"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
                             />

@@ -1,32 +1,8 @@
 .wrapper {
-    width: 340px;
+    width: 348px;
     padding: 20px 0 26px 8px;
 }
 
-//login
-.login {
-    position: relative;
-    padding: 20px 8px 24px;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 8px;
-        right: 8px;
-        height: 1px;
-        background-color: rgba(22, 24, 35, .12);
-        
-    }
-}
 
-.login-tip {
-    color: rgba(22, 24, 35, 0.5);
-}
 
-.login-btn {
-    width: 100%;
-    margin-top: 20px;
-    font-size: 1.8rem;
-    font-weight: 700;
-}
