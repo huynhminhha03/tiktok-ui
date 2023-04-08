@@ -41,8 +41,8 @@ function Sidebar() {
                 })}
             </Menu>
            <SuggestAccounts label='Suggested accounts' seeMore='See all'/>
-           {/* <SuggestAccounts label='Following accounts' seeMore='See more'/> */}
-
+           <SuggestAccounts label='Following accounts' seeMore='See more' />
+            <div className={cx('scroll-bar')}></div>
         </aside>
     );
 }

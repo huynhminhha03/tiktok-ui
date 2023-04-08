@@ -1,8 +1,14 @@
 .wrapper {
     width: 348px;
     padding: 20px 0 26px 8px;
+    min-height: 100%;
+    
 }
 
+.scroll-bar {
+    height: 106.431px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1) scale(3.90865) translateZ(-2.90865px) translateZ(-2px);
+}
 
 
 

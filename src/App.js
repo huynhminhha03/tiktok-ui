@@ -4,6 +4,7 @@ import { publicRoutes } from './routes';
 import DefaultLayout from '~/layouts';
 
 function App() {
+    
     return (
         <Router>
             <div className="App">

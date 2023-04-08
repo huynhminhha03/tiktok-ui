@@ -1,8 +1,11 @@
+// import classNames from "classnames/bind";
+// import styles from './Upload.module.scss';
+
+// const cx = classNames.bind(styles)
+
 function Upload() {
     return ( 
-        <h2>
-            Upload Page
-        </h2>
+        <h1>hello</h1>
      );
 }
 

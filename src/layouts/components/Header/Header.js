@@ -22,14 +22,13 @@ import {
     MoreIcon,
     SettingsCoin,
     TiktokLogo,
-    UploadIcon,
     UserIcon,
 } from '~/components/Icons';
 import Image from '~/components/Image';
 
 const cx = className.bind(styles);
 
-function Header() {
+function Header({ large }) {
     const currentUser = true;
 
     const MENU_ITEMS = [
@@ -101,7 +100,11 @@ function Header() {
 
     return (
         <header className={cx('wrapper')}>
-            <div className={cx('inner')}>
+            <div
+                className={cx('inner',{
+                    large,
+                })}
+            >
                 <Link to={config.routes.home} className={cx('logo')}>
                     <TiktokLogo />
                 </Link>
@@ -112,9 +115,9 @@ function Header() {
                     {currentUser ? (
                         <>
                             <Tippy delay={[0, 150]} content="Upload video" placement="bottom">
-                                <button className={cx('action-btn')}>
-                                    <UploadIcon />
-                                </button>
+                                <Button text to={config.routes.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                                    Upload
+                                </Button>
                             </Tippy>
                             <Tippy content="Messages" placement="bottom">
                                 <button className={cx('action-btn')}>
