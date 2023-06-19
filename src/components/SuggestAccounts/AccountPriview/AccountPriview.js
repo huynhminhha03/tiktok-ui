@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import styles from './AccountPriview.module.scss';
 import classNames from 'classnames/bind';
 import Button from '~/components/Button';
+import images from '~/assets/images';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -13,9 +15,9 @@ function AccountPriview() {
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
                 <Link to={'/@phuvilla'} className={cx('link')}>
-                    <img
+                    <Image
                         className={cx('avatar')}
-                        src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-1/269914322_1594144824251293_8665849558725026566_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=otmyCFb7TVgAX83VXuH&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfCC8Hj8aMAX3BHPFNi-t7oIrCFb68IkuTVxex_wUFtP-A&oe=64352057"
+                        src={images.avatar}
                         alt="hmh"
                     />
                 </Link>

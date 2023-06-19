@@ -102,7 +102,7 @@ function Header({ large }) {
         <header className={cx('wrapper')}>
             <div
                 className={cx('inner',{
-                    large,
+                    large
                 })}
             >
                 <Link to={config.routes.home} className={cx('logo')}>
@@ -115,9 +115,11 @@ function Header({ large }) {
                     {currentUser ? (
                         <>
                             <Tippy delay={[0, 150]} content="Upload video" placement="bottom">
-                                <Button text to={config.routes.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-                                    Upload
-                                </Button>
+                                <span>
+                                    <Button text to={config.routes.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                                        Upload
+                                    </Button>
+                                </span>
                             </Tippy>
                             <Tippy content="Messages" placement="bottom">
                                 <button className={cx('action-btn')}>

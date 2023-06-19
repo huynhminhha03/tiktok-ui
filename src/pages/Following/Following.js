@@ -1,8 +1,24 @@
+import classNames from 'classnames/bind';
+import styles from './Following.module.scss'
+import Post from '~/components/Post/Post';
+
+const cx = classNames.bind(styles)
+
 function Following() {
     return ( 
-        <h2>
-            Following Page
-        </h2>
+        <div className={cx('wrapper')}>
+        <div className={cx('container')}>
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </div>
+
+
+    </div>
      );
 }
 
